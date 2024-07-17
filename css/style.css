@@ -220,26 +220,42 @@ ol {
 .left-project {
   width: 843px;
   height: 600px;
+  overflow: hidden;
+  position: relative;
 }
-.left-project-content {
-  width: 100%;
+.left-project .overlay {
+  width: 396px;
   height: 100%;
-  object-fit: cover;
-  background-image: url('../image/Card.jpg');
+  background: linear-gradient(
+    329deg,
+    #1c1e53 -10.96%,
+    rgba(28, 30, 83, 0.42) 103.96%
+  );
+  position: absolute;
+  left: -100%;
+  top: 0;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
 }
-.left-project-content .left-project-content-info h1 {
+.left-project:hover .overlay {
+  left: 0;
+}
+.left-project .overlay h1 {
   padding: 335px 0 0 48px;
   color: #fff;
   font-size: 24px;
   font-weight: 328;
 }
-.left-project-content .left-project-content-info p {
+.left-project .overlay p {
   color: #fff;
   padding: 15px 0 0 48px;
   font-size: 16px;
   font-weight: 293;
 }
-.left-project-content a {
+.left-project a {
   padding: 40px 0 0 48px;
   color: #fcd980;
   font-size: 20px;
@@ -248,14 +264,6 @@ ol {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-.left-project-content .left-project-content-info {
-  width: 45%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #1c1e53;
-  opacity: 0.7;
 }
 .right-project {
   width: 405px;
@@ -267,21 +275,28 @@ ol {
 .right-project .right-project-bg {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   position: relative;
 }
-.right-project .right-project-bg .image {
+.right-project .right-project-bg .project-right-item-one {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-.right-project .right-project-bg .overlay {
-  width: 63vh;
-  height: 45vh;
-  background-color: #1c1e53;
-  opacity: 0.7;
-}
-.project-right-item-one {
+  background: linear-gradient(
+    329deg,
+    #1c1e53 -10.96%,
+    rgba(28, 30, 83, 0.42) 103.96%
+  );
   position: absolute;
+  left: -100%;
+  top: 0;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.right-project .right-project-bg:hover .project-right-item-one {
+  left: 0;
 }
 .project-right-item-one h1 {
   padding: 129px 0 0 56px;
@@ -509,6 +524,7 @@ ol {
 .right-section .right-section-info form input[type='url'] {
   padding: 20px 25px;
   margin-bottom: 20px;
+  color: #fff;
   border: 1px solid gray;
   background-color: #1e1e34;
   border-radius: 5px;
